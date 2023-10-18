@@ -52,4 +52,22 @@ body {
 #zero {
     grid-column: span 2;
 }
+/* ... Votre CSS actuel ... */
+
+/* Styles spécifiques pour les écrans de petite taille (mobiles) */
+@media (max-width: 500px) {
+    .calculator {
+        width: 90%;
+        font-size: 1.2em;  /* Augmentation de la taille de la police pour une meilleure lisibilité */
+    }
+
+    .btn {
+        height: 50px;  /* Réduire la hauteur des boutons pour économiser de l'espace */
+    }
+
+    .display {
+        padding: 15px;  /* Réduire l'espaceur de l'affichage */
+        font-size: 1.6em;  /* Augmentation de la taille de la police pour une meilleure lisibilité */
+    }
+}
 
