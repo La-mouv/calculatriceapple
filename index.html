@@ -4,15 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculatrice</title>
-    <link rel="stylesheet" href="styles.css">
+    <!-- Nous allons ajouter du CSS et du JavaScript plus tard -->
 </head>
 <body>
-    <div class="calculatrice">
-        <input type="text" class="ecran" readonly>
-        <div class="touches">
-            <!-- Les boutons de la calculatrice seront ici -->
-        </div>
+
+<div class="calculator">
+    <!-- Affichage de la calculatrice -->
+    <div class="display">
+        <span id="currentInput">0</span>
     </div>
-    <script src="script.js"></script>
+    
+    <!-- Les boutons de la calculatrice -->
+    <div class="buttons">
+        <button class="btn" data-value="AC">AC</button>
+        <button class="btn" data-value="+/-">+/-</button>
+        <button class="btn" data-value="%">%</button>
+        <button class="btn operation" data-value="/">÷</button>
+        <button class="btn" data-value="7">7</button>
+        <button class="btn" data-value="8">8</button>
+        <button class="btn" data-value="9">9</button>
+        <button class="btn operation" data-value="*">×</button>
+        <button class="btn" data-value="4">4</button>
+        <button class="btn" data-value="5">5</button>
+        <button class="btn" data-value="6">6</button>
+        <button class="btn operation" data-value="-">-</button>
+        <button class="btn" data-value="1">1</button>
+        <button class="btn" data-value="2">2</button>
+        <button class="btn" data-value="3">3</button>
+        <button class="btn operation" data-value="+">+</button>
+        <button class="btn" data-value="0" id="zero">0</button>
+        <button class="btn" data-value=".">,</button>
+        <button class="btn operation" data-value="=">=</button>
+    </div>
+</div>
+
 </body>
 </html>
