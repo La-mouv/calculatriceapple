@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", function() {
     
     const display = document.getElementById("currentInput");
@@ -42,43 +41,45 @@ document.addEventListener("DOMContentLoaded", function() {
                     if (previousInput && operation) {
                         previousInput = String(operate(previousInput, currentInput, operation));
                         currentInput = "";
-                    } else {                        operation = buttonValue;
+                    } else {
+                        operation = buttonValue;
                         previousInput = currentInput;
                         currentInput = "";
                     }
                 }
                 break;
             case ".":
-            if (!currentInput.includes(".")) {
-                currentInput += ".";
-            }
-            break;
-        default:
-            currentInput += buttonValue;
-            break;
+                if (!currentInput.includes(".")) {
+                    currentInput += ".";
+                }
+                break;
+            default:
+                currentInput += buttonValue;
+                break;
+        }
+
+        updateDisplay();
+    });
+
+    function operate(a, b, op) {
+        a = parseFloat(a);
+        b = parseFloat(b);
+
+        switch(op) {
+            case "+":
+                return a + b;
+            case "-":
+                return a - b;
+            case "*":
+                return a * b;
+            case "/":
+                if (b !== 0) {
+                    return a / b;
+                } else {
+                    alert("Division par zéro!");
+                    return "";
+                }
+        }
     }
 
-    updateDisplay();
-});
-
-function operate(a, b, op) {
-    a = parseFloat(a);
-    b = parseFloat(b);
-
-    switch(op) {
-        case "+":
-            return a + b;
-        case "-":
-            return a - b;
-        case "*":
-            return a * b;
-        case "/":
-            if (b !== 0) {
-                return a / b;
-            } else {
-                alert("Division par zéro!");
-                return "";
-            }
-    }
-});
-
+}); // Ici se termine le "DOMContentLoaded"
