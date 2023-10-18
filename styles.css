@@ -1,37 +1,55 @@
-.calculatrice {
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+}
+
+.calculator {
+    border-radius: 8px;
+    overflow: hidden;
     width: 250px;
-    margin: 50px auto;
-    padding: 20px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+}
+
+.display {
     background-color: #333;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px #000;
+    padding: 20px;
+    font-size: 2em;
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
-.ecran {
-    width: 100%;
-    height: 40px;
-    margin-bottom: 10px;
-    padding: 5px;
-    background-color: #000;
-    color: #fff;
-    text-align: right;
-    font-size: 1.5em;
-    border-radius: 5px;
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.btn {
     border: none;
-}
-
-.touches button {
-    width: 25%;
     height: 60px;
     font-size: 1.5em;
-    margin: 2.5%;
-    border: none;
-    background-color: #666;
-    color: #fff;
-    border-radius: 5px;
-    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.touches button:hover {
-    background-color: #555;
+.btn:hover {
+    background-color: #f4f4f4;
 }
+
+.operation {
+    background-color: #ffa500;
+    color: white;
+}
+
+.operation:hover {
+    background-color: #ff8c00;
+}
+
+#zero {
+    grid-column: span 2;
+}
+
